@@ -1,7 +1,5 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/shared/header";
-import Navber from "@/components/shared/Navber";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -20,9 +18,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.className} min-h-full flex flex-col container mx-auto`}
       >
-        <Header />
-        <Navber />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );
